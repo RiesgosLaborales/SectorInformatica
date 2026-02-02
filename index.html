@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riesgos Laborales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Riesgos laborales en el sector informático</h1>
+        <p>Principales riesgos y medidas de prevención</p>
+    </header>
+     <div class="info">
+    Aunque el trabajo informático no parece peligroso, sí tiene muchos riesgos, sobre todo físicos y psicológicos, por pasar muchas horas frente al ordenador. 
+  </div>
+
+  <section class="cards-section">
+    <div class="card"
+         data-img="espaldamal.jpg"
+         data-img-hover="espaldabien.jpg"
+         data-text="Los problemas posturales y musculoesqueléticos son frecuentes y suelen manifestarse como dolor de espalda especialmente lumbalgias dolor de cuello y hombros síndrome del túnel carpiano y contracturas musculares estos problemas suelen estar relacionados con una mala postura al sentarse el uso de mesas o sillas mal ajustadas y el uso prolongado del teclado y el ratón"
+         data-text-hover="La prevención de los problemas posturales y musculoesqueléticos se basa en mantener una postura correcta al sentarse, utilizar mesas y sillas bien ajustadas y adaptar el puesto de trabajo a la persona. El uso de una silla con apoyo lumbar, la pantalla a la altura de los ojos y el teclado y el ratón en una posición cómoda ayudan a reducir la tensión en la espalda, el cuello y las muñecas, evitando así dolores y contracturas musculares.">
+      <img src="espaldamal.jpg">
+      <p>Los problemas posturales y musculoesqueléticos son frecuentes y suelen manifestarse como dolor de espalda especialmente lumbalgias dolor de cuello y hombros síndrome del túnel carpiano y contracturas musculares estos problemas suelen estar relacionados con una mala postura al sentarse el uso de mesas o sillas mal ajustadas y el uso prolongado del teclado y el ratón</p>
+    </div>
+
+    <div class="card"
+         data-img="visualmal.jpg"
+         data-img-hover="visualbien.png"
+         data-text="La fatiga visual es un problema frecuente en el sector de informática y suele manifestarse con ojos secos o irritados, visión borrosa, dolores de cabeza y cansancio ocular. Estos síntomas aparecen principalmente por pasar muchas horas frente a las pantallas, trabajar con una iluminación inadecuada y usar monitores mal regulados en cuanto a brillo y contraste."
+         data-text-hover="La prevención de la fatiga visual consiste en aplicar hábitos que reduzcan el esfuerzo de los ojos, como seguir la regla 20-20-20, ajustando correctamente el brillo y el contraste de la pantalla y utilizando una iluminación adecuada que evite reflejos. Además, parpadear con frecuencia ayuda a mantener los ojos hidratados y a disminuir el cansancio ocular.">
+      <img src="visualmal.jpg">
+      <p>La fatiga visual es un problema frecuente en el sector de informática y suele manifestarse con ojos secos o irritados, visión borrosa, dolores de cabeza y cansancio ocular. Estos síntomas aparecen principalmente por pasar muchas horas frente a las pantallas, trabajar con una iluminación inadecuada y usar monitores mal regulados en cuanto a brillo y contraste.</p>
+    </div>
+
+    <div class="card"
+         data-img="psymal.jpg"
+         data-img-hover="psybien.jpg"
+         data-text="Los riesgos psicológicos en el sector de informática son cada vez más comunes y suelen manifestarse como estrés laboral, ansiedad, agotamiento mental o burnout y, en algunos casos, aislamiento social. Estos problemas suelen estar relacionados con una carga de trabajo excesiva, plazos muy ajustados, tareas repetitivas o monótonas y el teletrabajo sin límites claros entre la vida personal y laboral."
+         data-text-hover="La prevención de los riesgos psicológicos pasa por una buena organización del trabajo, evitando jornadas excesivas y estableciendo horarios definidos. También es importante mantener una comunicación constante con el equipo, repartir adecuadamente las tareas y aprender a desconectar del trabajo. Separar el tiempo laboral de la vida personal, especialmente en el teletrabajo, y reservar momentos de descanso contribuye a cuidar la salud mental y a prevenir el agotamiento a largo plazo.">
+      <img src="psymal.jpg" >
+      <p>Los riesgos psicológicos en el sector de informática son cada vez más comunes y suelen manifestarse como estrés laboral, ansiedad, agotamiento mental o burnout y, en algunos casos, aislamiento social. Estos problemas suelen estar relacionados con una carga de trabajo excesiva, plazos muy ajustados, tareas repetitivas o monótonas y el teletrabajo sin límites claros entre la vida personal y laboral.</p>
+    </div>
+  </section>
+<script>
+    document.querySelectorAll('.card').forEach(card => {
+      const img = card.querySelector('img');
+      const text = card.querySelector('p');
+
+      const originalImg = card.dataset.img;
+      const hoverImg = card.dataset.imgHover;
+      const originalText = card.dataset.text;
+      const hoverText = card.dataset.textHover;
+
+      card.addEventListener('mouseenter', () => {
+        img.src = hoverImg;
+        text.textContent = hoverText;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        img.src = originalImg;
+        text.textContent = originalText;
+      });
+    });
+  </script>
+</body>
+</html>
